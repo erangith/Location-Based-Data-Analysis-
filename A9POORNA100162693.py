@@ -1,7 +1,16 @@
 
 # Author: <Dadayakkara Dewege poorna Erangith Wijesire> 
 
-import requests
+
+
+import subprocess
+
+# Install 'requests' module if not already installed
+try:
+    import requests
+except ImportError:
+    subprocess.check_call(['pip', 'install', 'requests'])
+    import requests
 
 def getDataFromApi(url):
     response = requests.get(url)
